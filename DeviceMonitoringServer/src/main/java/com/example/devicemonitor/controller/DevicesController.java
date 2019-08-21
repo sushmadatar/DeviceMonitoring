@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -24,7 +25,8 @@ public class DevicesController {
 	}
 
 	@PostMapping(path = "/addDevice")
-	public @ResponseBody String addNewDevice() {
-		return "";
+	public @ResponseBody String addNewDevice(@RequestBody Device device) {
+		deviceRepository.save(device);
+		return "done";
 	}
 }

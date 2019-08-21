@@ -11,6 +11,7 @@ public class Device {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer Id;
 
+	@Column(name = "name")
 	private String name;
 
 	@Column(name = "\"os version\"")
@@ -19,10 +20,10 @@ public class Device {
 	@Column(name = "\"sdk version\"")
 	private String sdkVersion;
 
-	@Column(name = "\"device\"")
+	@Column(name = "device")
 	private String device;
 
-	@Column(name = "\"model\"")
+	@Column(name = "model")
 	private String model;
 
 	public Integer getId() {
