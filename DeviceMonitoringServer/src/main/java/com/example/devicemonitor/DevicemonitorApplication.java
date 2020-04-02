@@ -12,6 +12,8 @@ public class DevicemonitorApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(DevicemonitorApplication.class, args);
+		 System.setProperty("server.lockOutTime","20");
 	}
+	
 
 }
